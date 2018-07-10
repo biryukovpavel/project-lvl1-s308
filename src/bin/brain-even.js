@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import askName from '..';
 import evenGame from '../games/even';
 
