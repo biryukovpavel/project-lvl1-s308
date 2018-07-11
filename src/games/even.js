@@ -1,29 +1,36 @@
 import readlineSync from 'readline-sync';
 
-const getRandomNumber = (min = 1, max = 100) => Math.round(Math.random() * ((max - min) + 1)) + min;
-const correctAnswer = number => (number % 2 === 0 ? 'yes' : 'no');
+const questionsCount = 3;
 
-export default (userName) => {
-  const iter = (number, acc) => {
-    if (acc === 0) {
+const getRandomNumber = (min = 1, max = 100) => Math.floor(Math.random() * ((max - min) + 1)) + min;
+const isEven = number => number % 2 === 0;
+const correctAnswer = question => (isEven(question) ? 'yes' : 'no');
+
+
+export default () => {
+  console.log('Welcome to the Brain Games!\nAnswer "yes" if number even otherwise answer "no".');
+
+  const userName = readlineSync.question('\nMay I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
+
+  const iter = (questionsLeft) => {
+    if (questionsLeft === 0) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
 
-    const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
-    // console.log(`Your answer: ${answer}`);
-
-    const correctAnsw = correctAnswer(number);
-    if (correctAnswer(number) === answer) {
+    const question = getRandomNumber();
+    const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
+    const correctAnsw = correctAnswer(question);
+    if (correctAnsw === answer) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnsw}'.\nLet's try again, ${userName}!`);
       return;
     }
 
-    iter(getRandomNumber(), acc - 1);
+    iter(questionsLeft - 1);
   };
 
-  const count = 3;
-  iter(getRandomNumber(), count);
+  iter(questionsCount);
 };
