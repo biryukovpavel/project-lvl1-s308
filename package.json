@@ -1,6 +1,6 @@
 {
   "name": "brain-games-bp",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Set of mini-games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
@@ -35,6 +35,7 @@
     "eslint-plugin-import": "^2.13.0"
   },
   "dependencies": {
+    "hexlet-pairs": "^1.0.8",
     "readline-sync": "^1.4.9"
   }
 }
