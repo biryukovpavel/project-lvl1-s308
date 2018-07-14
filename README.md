@@ -35,27 +35,37 @@ Every game has 3 rounds. If you give right answer on any offered question it let
 ### Brain even
 > Answer "yes" if number even otherwise answer "no".
 #### start the game:
-`$ brain-even`
+```
+$ brain-even
+```
 
 ### Brain calc
 > Calculate the result of the expression.
 #### start the game:
-`$ brain-calc`
+```
+$ brain-calc
+```
 
 ### Brain gcd
 > Find the greatest common divisor of given numbers.
 #### start the game:
-`$ brain-gcd`
+```
+$ brain-gcd
+```
 
 ### Brain progression
 > Calculate the missing number of given progression.
 #### start the game:
-`$ brain-progression`
+```
+$ brain-progression
+```
 
 ### Brain prime
 > Answer "yes" if number is prime otherwise answer "no".
 #### start the game:
-`$ brain-prime`
+```
+$ brain-prime
+```
 
 ## Demo
 
