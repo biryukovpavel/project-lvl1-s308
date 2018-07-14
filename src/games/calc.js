@@ -1,5 +1,5 @@
 import getRandomNumber from '../common/utils';
-import startGame, { makeQuestionAndAnswer } from '../gameEngine';
+import startGame, { cons } from '../gameEngine';
 
 const description = 'What is the result of the expression?';
 
@@ -10,11 +10,11 @@ const getQuestionAndAnswer = () => {
 
   switch (randOperation) {
     case 1:
-      return makeQuestionAndAnswer(`${num1} + ${num2}`, num1 + num2);
+      return cons(`${num1} + ${num2}`, num1 + num2);
     case 2:
-      return makeQuestionAndAnswer(`${num1} - ${num2}`, num1 - num2);
+      return cons(`${num1} - ${num2}`, num1 - num2);
     case 3:
-      return makeQuestionAndAnswer(`${num1} * ${num2}`, num1 * num2);
+      return cons(`${num1} * ${num2}`, num1 * num2);
     default:
       return null;
   }

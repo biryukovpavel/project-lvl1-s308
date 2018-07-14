@@ -1,5 +1,5 @@
 import getRandomNumber from '../common/utils';
-import startGame, { makeQuestionAndAnswer } from '../gameEngine';
+import startGame, { cons } from '../gameEngine';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -9,7 +9,7 @@ const getQuestionAndAnswer = () => {
   const question = getRandomNumber();
   const correctAnswer = getCorrectAnswer(question);
 
-  return makeQuestionAndAnswer(question, correctAnswer);
+  return cons(question, correctAnswer);
 };
 
 export default () => {

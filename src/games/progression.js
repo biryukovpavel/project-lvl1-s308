@@ -1,5 +1,5 @@
 import getRandomNumber from '../common/utils';
-import startGame, { makeQuestionAndAnswer } from '../gameEngine';
+import startGame, { cons } from '../gameEngine';
 
 const description = 'What number is missing in this progression?';
 
@@ -31,7 +31,7 @@ const getQuestionAndAnswer = () => {
   const question = getProgression(getProgressionElement, missingNumberIndex);
   const correctAnswer = getProgressionElement(missingNumberIndex);
 
-  return makeQuestionAndAnswer(question, correctAnswer);
+  return cons(question, correctAnswer);
 };
 
 export default () => {

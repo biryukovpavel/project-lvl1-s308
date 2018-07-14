@@ -1,9 +1,8 @@
 import readlineSync from 'readline-sync';
-import { cons, car, cdr } from 'hexlet-pairs';
+import { car, cdr } from 'hexlet-pairs';
 
 const questionsCount = 3;
 
-export const makeQuestionAndAnswer = (question, answer) => cons(question, answer);
 const getQuestion = questionAndAnswer => car(questionAndAnswer);
 const getAnswer = questionAndAnswer => cdr(questionAndAnswer);
 
