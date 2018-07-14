@@ -28,25 +28,25 @@ const getSumDigits = (number) => {
 
   return iter(number, 0);
 };
-const getBalancedNumber = (countDigits, minDigit, countMaxDigit) => {
-  if (countDigits === 0) {
+const getBalancedNumber = (digitsCount, minDigit, maxDigitsCount) => {
+  if (digitsCount === 0) {
     return '';
   }
 
-  const currentDigit = countDigits > countMaxDigit ? minDigit : minDigit + 1;
-  return `${currentDigit}${getBalancedNumber(countDigits - 1, minDigit, countMaxDigit)}`;
+  const currentDigit = digitsCount > maxDigitsCount ? minDigit : minDigit + 1;
+  return `${currentDigit}${getBalancedNumber(digitsCount - 1, minDigit, maxDigitsCount)}`;
 };
 
 const getQuestionAndAnswer = () => {
   const num = getRandomNumber(10, 200);
 
-  const countDigits = getCountDigits(num);
+  const digitsCount = getCountDigits(num);
   const sumDigits = getSumDigits(num);
-  const minDigit = Math.floor(sumDigits / countDigits);
-  const countMaxDigit = sumDigits % countDigits;
+  const minDigit = Math.floor(sumDigits / digitsCount);
+  const maxDigitsCount = sumDigits % digitsCount;
 
   const question = num;
-  const correctAnswer = getBalancedNumber(countDigits, minDigit, countMaxDigit);
+  const correctAnswer = getBalancedNumber(digitsCount, minDigit, maxDigitsCount);
 
   return makeQuestionAndAnswer(question, correctAnswer);
 };
