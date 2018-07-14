@@ -59,4 +59,4 @@ Every game has 3 rounds. If you give right answer on any offered question it let
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/yaMbDDJM99piOC3B2O8e6avst.png)](https://asciinema.org/a/yaMbDDJM99piOC3B2O8e6avst)
+[![asciicast](https://asciinema.org/a/3SEuNjArNvhMnGjrue6bgdP94.png)](https://asciinema.org/a/3SEuNjArNvhMnGjrue6bgdP94)
