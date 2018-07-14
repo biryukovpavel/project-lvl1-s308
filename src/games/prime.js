@@ -1,4 +1,4 @@
-import getRandomNumber from '../common/randomNumber';
+import getRandomNumber from '../common/utils';
 import startGame, { makeQuestionAndAnswer } from '../gameEngine';
 
 const description = 'Is this number prime?';
