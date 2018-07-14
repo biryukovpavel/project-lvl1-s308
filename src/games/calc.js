@@ -1,6 +1,7 @@
 import getRandomNumber from '../common/randomNumber';
-import { makeQuestionAndAnswer } from '../common/questionAndAnswer';
-import startGame from '../game';
+import startGame, { makeQuestionAndAnswer } from '../gameEngine';
+
+const description = 'What is the result of the expression?';
 
 const getQuestionAndAnswer = () => {
   const num1 = getRandomNumber();
@@ -20,7 +21,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  const description = 'What is the result of the expression?';
-
   startGame(description, getQuestionAndAnswer);
 };

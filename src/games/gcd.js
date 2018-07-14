@@ -1,6 +1,7 @@
 import getRandomNumber from '../common/randomNumber';
-import { makeQuestionAndAnswer } from '../common/questionAndAnswer';
-import startGame from '../game';
+import startGame, { makeQuestionAndAnswer } from '../gameEngine';
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (num1, num2) => {
   if (num2 === 0) {
@@ -19,7 +20,5 @@ const getQuestionAndAnswer = () => {
 };
 
 export default () => {
-  const description = 'Find the greatest common divisor of given numbers.';
-
   startGame(description, getQuestionAndAnswer);
 };

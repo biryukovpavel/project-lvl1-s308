@@ -1,7 +1,11 @@
 import readlineSync from 'readline-sync';
-import { getQuestion, getAnswer } from './common/questionAndAnswer';
+import { cons, car, cdr } from 'hexlet-pairs';
 
 const questionsCount = 3;
+
+export const makeQuestionAndAnswer = (question, answer) => cons(question, answer);
+export const getQuestion = questionAndAnswer => car(questionAndAnswer);
+export const getAnswer = questionAndAnswer => cdr(questionAndAnswer);
 
 export default (description, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
@@ -19,11 +23,11 @@ export default (description, getQuestionAndAnswer) => {
     const questionAndAnswer = getQuestionAndAnswer();
     const question = getQuestion(questionAndAnswer);
     const answer = readlineSync.question(`Question: ${question}\nYour answer: `);
-    const correctAnsw = getAnswer(questionAndAnswer);
-    if (String(correctAnsw) === String(answer)) {
+    const correctAnswer = getAnswer(questionAndAnswer);
+    if (String(correctAnswer) === String(answer)) {
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnsw}'.\nLet's try again, ${userName}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
       return;
     }
 
