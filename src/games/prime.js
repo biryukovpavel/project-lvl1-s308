@@ -4,23 +4,19 @@ import startGame, { makeQuestionAndAnswer } from '../gameEngine';
 const description = 'Is this number prime?';
 
 const isPrime = (num) => {
-  const smallestDivisor = () => {
-    const findDivisor = (testDivisor) => {
-      if (testDivisor ** 2 > num) {
-        return num;
-      }
+  const findSmallestDivisor = (testDivisor) => {
+    if (testDivisor ** 2 > num) {
+      return num;
+    }
 
-      if (num % testDivisor === 0) {
-        return testDivisor;
-      }
+    if (num % testDivisor === 0) {
+      return testDivisor;
+    }
 
-      return findDivisor(testDivisor + 1);
-    };
-
-    return findDivisor(2);
+    return findSmallestDivisor(testDivisor + 1);
   };
 
-  return num === smallestDivisor();
+  return num === findSmallestDivisor(2);
 };
 const getCorrectAnswer = question => (isPrime(question) ? 'yes' : 'no');
 
