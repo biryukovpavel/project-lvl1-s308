@@ -1,5 +1,6 @@
+import { cons } from 'hexlet-pairs';
 import getRandomNumber from '../common/utils';
-import startGame, { cons } from '../gameEngine';
+import startGame from '../gameEngine';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
