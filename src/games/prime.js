@@ -4,6 +4,10 @@ import startGame, { makeQuestionAndAnswer } from '../gameEngine';
 const description = 'Is this number prime?';
 
 const isPrime = (num) => {
+  if (num === 1) {
+    return false;
+  }
+
   const findSmallestDivisor = (testDivisor) => {
     if (testDivisor ** 2 > num) {
       return num;
