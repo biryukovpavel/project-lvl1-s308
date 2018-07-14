@@ -5,7 +5,7 @@ const description = 'What number is missing in this progression?';
 
 const termsCount = 10;
 
-const progressionGenerator = (firstNumber, difference) => (
+const makeProgressionGenerator = (firstNumber, difference) => (
   index => firstNumber + (index * difference)
 );
 const getProgression = (getProgressionElement, missingNumberIndex) => {
@@ -26,7 +26,7 @@ const getQuestionAndAnswer = () => {
   const difference = getRandomNumber(1, 25);
   const missingNumberIndex = getRandomNumber(0, termsCount - 1);
 
-  const getProgressionElement = progressionGenerator(firstNumber, difference);
+  const getProgressionElement = makeProgressionGenerator(firstNumber, difference);
 
   const question = getProgression(getProgressionElement, missingNumberIndex);
   const correctAnswer = getProgressionElement(missingNumberIndex);
