@@ -1,6 +1,6 @@
 {
   "name": "brain-games-bp",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "Set of mini-games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",

@@ -4,7 +4,7 @@ import startGame, { makeQuestionAndAnswer } from '../gameEngine';
 const description = 'Is this number prime?';
 
 const isPrime = (num) => {
-  if (num === 1) {
+  if (num <= 1) {
     return false;
   }
 

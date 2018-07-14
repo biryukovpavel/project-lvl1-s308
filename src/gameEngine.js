@@ -4,8 +4,8 @@ import { cons, car, cdr } from 'hexlet-pairs';
 const questionsCount = 3;
 
 export const makeQuestionAndAnswer = (question, answer) => cons(question, answer);
-export const getQuestion = questionAndAnswer => car(questionAndAnswer);
-export const getAnswer = questionAndAnswer => cdr(questionAndAnswer);
+const getQuestion = questionAndAnswer => car(questionAndAnswer);
+const getAnswer = questionAndAnswer => cdr(questionAndAnswer);
 
 export default (description, getQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
