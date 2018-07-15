@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import getRandomNumber from '../common/utils';
+import getRandomNumber from '../utils';
 import startGame from '../gameEngine';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';

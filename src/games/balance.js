@@ -1,5 +1,5 @@
 import { cons } from 'hexlet-pairs';
-import getRandomNumber from '../common/utils';
+import getRandomNumber from '../utils';
 import startGame from '../gameEngine';
 
 const description = 'Balance the given number.';
@@ -16,6 +16,7 @@ const getCountDigits = (number) => {
 
   return iter(number, 0);
 };
+
 const getSumDigits = (number) => {
   const iter = (items, acc) => {
     if (items === 0) {
@@ -29,6 +30,7 @@ const getSumDigits = (number) => {
 
   return iter(number, 0);
 };
+
 const getBalancedNumber = (number) => {
   const digitsCount = getCountDigits(number);
   const sumDigits = getSumDigits(number);
