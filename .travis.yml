@@ -4,5 +4,12 @@ language: node_js
 node_js:
   - node
 
+addons:
+  sonarcloud:
+    organization: "biryukovpavel-github"
+    token:
+      secure: "PMwkAgqyF4f22xbY9CsQGgYmfbD8fkGKjNUeH1BZG93qA9z6/DEYtltG9mrDZ/MFaeZ5jD9nW+rdotCG0lWf2Np2DHrCeUT6K5ArQUa3GWKLpMujNNRy5nkH3yqNuFaxqos1UI7XkcM7wa1TjyAounx6RqiPlraylQkl8i+2pbSl2gI+KILD7kyp4bhTMSz4ZRtd21DYSdCm5gH02REjKC2U45lTevZ7daGLgNgtK4eQXxreUgFDjH9IPPw7ler4CcnmM/lw2AbWsCfjLGBMmpD02mCKJyu3jPvqJjjM1O00rBL2UybtJMRdml65VxRDQaEdwubX3YOXIi9CYr6irgo1eiTwOES7zZLHAI9/MFKU9VD9RVCOR485ULoE+4nEBGFFstI/74sYu/avvjJyduqnTCgjU3QcT94r6ZvXxSYh+5swLy/fsMX0I6R5FMW9KWa8KpUj4Cq6N7PwT8bC448gLYAVKoYHGFqty/ASpoi9U73RQ8ox50pfginAbw2XaWm4HRJnnuYLsy1unm97UfTFqIFDFkiaHpgjJyPMc+3L/eM5lfXQiqX4s/wtNxUCd66nn8TevXi4if2zjIg9riFeG+RMNQ/4L7JN1b3/3uW3JihuHctF6SwI1waBGTYlexLY18nIINFeuwLsAjUVOa264PcI1nwzWx+DjoRDrOU="
+
 script:
-- make lint
+  - make lint
+  - sonar-scanner
