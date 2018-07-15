@@ -9,6 +9,7 @@ const termsCount = 10;
 const makeProgressionGenerator = (firstNumber, difference) => (
   index => firstNumber + (index * difference)
 );
+
 const getProgression = (getProgressionElement, missingNumberIndex) => {
   const iter = (elementsIndex, acc) => {
     if (elementsIndex === termsCount) {

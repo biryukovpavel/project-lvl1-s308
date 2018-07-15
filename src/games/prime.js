@@ -23,6 +23,7 @@ const isPrime = (num) => {
 
   return num === findSmallestDivisor(2);
 };
+
 const getCorrectAnswer = question => (isPrime(question) ? 'yes' : 'no');
 
 const getQuestionAndAnswer = () => {

@@ -11,6 +11,7 @@ const getGcd = (num1, num2) => {
 
   return getGcd(num2, num1 % num2);
 };
+
 const getQuestionAndAnswer = () => {
   const num1 = getRandomNumber();
   const num2 = getRandomNumber();
