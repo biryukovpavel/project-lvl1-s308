@@ -32,21 +32,20 @@ const getSumDigits = (number) => {
 };
 
 const getBalancedNumber = (number) => {
-  const digitsCount = getCountDigits(number);
-  const sumDigits = getSumDigits(number);
-  const minDigit = Math.floor(sumDigits / digitsCount);
-  const maxDigitsCount = sumDigits % digitsCount;
-
-  const buildBalancedNumber = () => {
+  const makeBalancedNumber = (digitsCount, minDigit, maxDigitsCount) => {
     if (digitsCount === 0) {
       return '';
     }
 
     const currentDigit = digitsCount > maxDigitsCount ? minDigit : minDigit + 1;
-    return `${currentDigit}${getBalancedNumber(digitsCount - 1, minDigit, maxDigitsCount)}`;
+    return `${currentDigit}${makeBalancedNumber(digitsCount - 1, minDigit, maxDigitsCount)}`;
   };
 
-  return buildBalancedNumber();
+  const digitsCount = getCountDigits(number);
+  const sumDigits = getSumDigits(number);
+  const minDigit = Math.floor(sumDigits / digitsCount);
+  const maxDigitsCount = sumDigits % digitsCount;
+  return makeBalancedNumber(digitsCount, minDigit, maxDigitsCount);
 };
 
 const getQuestionAndAnswer = () => {
