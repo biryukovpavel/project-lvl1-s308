@@ -1,5 +1,6 @@
 # Brain-games
 
+[![npm version](https://badge.fury.io/js/brain-games-bp.svg)](https://badge.fury.io/js/brain-games-bp)
 [![Maintainability](https://api.codeclimate.com/v1/badges/8b8cbb1e38f9bddd1663/maintainability)](https://codeclimate.com/github/biryukovpavel/project-lvl1-s308/maintainability)
 [![Build Status](https://travis-ci.org/biryukovpavel/project-lvl1-s308.svg?branch=master)](https://travis-ci.org/biryukovpavel/project-lvl1-s308)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=project-lvl1-s308&metric=alert_status)](https://sonarcloud.io/dashboard?id=project-lvl1-s308)
